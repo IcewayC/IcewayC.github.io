@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>冰 天 梦 璇</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-09-07T00:24:09.073Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Iceway</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github.io + hexo建站</title>
+    <link href="http://yoursite.com/2017/06/28/hexo%E5%BB%BA%E7%AB%99/"/>
+    <id>http://yoursite.com/2017/06/28/hexo建站/</id>
+    <published>2017-06-28T02:58:50.000Z</published>
+    <updated>2017-09-07T00:24:09.073Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.imgur.com/ZQVEpo1.png" alt=""><br><a id="more"></a></p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>上半年就想要开坑做一个个人博客用于技术生活交流，本来是想用Django的一个老坑来重建，但考虑到自己那捉鸡的前端水平，果断放弃并一把抱住框架的大腿。几经筛选选择了github + hexo这个框架，用了大概一天的时间大体完成（大部分时间在写校史的微博…），简单分享一下完成过程。</p>
+<h1 id="完成过程"><a href="#完成过程" class="headerlink" title="完成过程"></a>完成过程</h1><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>Github方面用到的就是Github.io作为博客文件的仓库。搭建过程为：</p>
+<p>1.安装git<br>2.申请github账号<br>3.新建github.io仓库</p>
+<p>具体参见度娘，很多大神有详细攻略，这里就不赘述了。</p>
+<p>Hexo框架基于Node.js，安装hexo框架过程：<br>1.安装Node.js<br>2.安装npm<br>3.安装hexo：npm install -g hexo-cli<br>4.最后初始化博客 hexo init blog（注意最后一个命令要在博客目录下完成）</p>
+<h2 id="Hexo常见命令"><a href="#Hexo常见命令" class="headerlink" title="Hexo常见命令"></a>Hexo常见命令</h2><p>hexo init blog   //初始化博客<br>hexo n(ew) “新博客的名字”   //新建博客<br>hexo g(enerate)   //生成代码<br>hexo s(erver)   //开启本地服务器，用于测试，地址localhost:4000<br>hexo d(eploy)   //部署到github.io仓库中，博客上线<br>hexo clean   //清空缓存</p>
+<p>上线过程：<br>hexo n “new blog”<br>hexo clean<br>hexo g<br>hexo d</p>
+<h2 id="安装git部署插件"><a href="#安装git部署插件" class="headerlink" title="安装git部署插件"></a>安装git部署插件</h2><p>hexo部分功能需要插件完成，后面的next主题中还会出现，这里是部署git时需要的插件（插件的下载要在blog文件夹的位置开启命令行进行）<br>npm install hexo-deployer-git –save</p>
+<h2 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h2><p>推送网站时需要在_config.yml文件中配置推送地址及类型</p>
+<p>然后就可以通过上文上线命令将博客推送至gitHub.io仓库上，所有人都可以在网上看到你的博客了。</p>
+<h2 id="NexT主题搭建"><a href="#NexT主题搭建" class="headerlink" title="NexT主题搭建"></a>NexT主题搭建</h2><p>博客搭建比较容易，比较费时的在于主题的选择和配置上。<br>我这里选择比较主流的next主题。</p>
+<p>在站点_config.yml配置文件中修改主题为next</p>
+<p><img src="https://i.imgur.com/p7g9ekz.png" alt=""></p>
+<p>打开主题_config.yml配置文件中修改主题样式，我选择的是Mist，动态效果会好一些，读者可以自己比对选择</p>
+<p><img src="https://i.imgur.com/Cq5qygy.png" alt=""></p>
+<p>剩下的高级个性化设计，如侧边栏的设计、背景图片、音乐插件等等读者可以去百度搜索，有不少博主有详细的分享，我这里就不赘述。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>hexo还有许多支持我还没有去尝试，这个坑会不断的填，遇到项目或者有价值的代码过程我都会在博客中分享，欢迎交流。</p>
+<p>参考材料地址：<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/26625249</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ZQVEpo1.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="项目" scheme="http://yoursite.com/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>独立开发校史竞赛平台总结</title>
+    <link href="http://yoursite.com/2017/06/27/%E6%A0%A1%E5%8F%B2/"/>
+    <id>http://yoursite.com/2017/06/27/校史/</id>
+    <published>2017-06-27T02:25:22.000Z</published>
+    <updated>2017-09-07T00:32:19.897Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.imgur.com/G4u5zKa.jpg" alt=""><br><a id="more"></a></p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>该项目用于2016级东南大学新生校史知识竞赛初赛答题所开发的web平台，具体代码见<a href="https://github.com/IcewayC/PHP_seuhistory" target="_blank" rel="external">这里</a></p>
+<h1 id="具体细节要求"><a href="#具体细节要求" class="headerlink" title="具体细节要求"></a>具体细节要求</h1><ol>
+<li>首先就是坑爹的IE6支持，可能这是最后一次要求对IE6的支持（据说就这一条导致很多大佬放弃了这个项目）。</li>
+<li>要求同一间机房的题目尽量保持不同。</li>
+<li>考虑学校性能（没有变态到要用负载均衡，但以及上万名考生的负载，要尽可能降低服务器压力）。</li>
+</ol>
+<h1 id="项目实现过程"><a href="#项目实现过程" class="headerlink" title="项目实现过程"></a>项目实现过程</h1><h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h2><p>当时处于小白状态，所以选择了对新手较为友好的PHP作为项目后台语言，选择Windows平台作为开发平台，XAMPP来部署PHP开发环境。</p>
+<p>这可以说是对新手最友好的一套方案，零基础也是可以上手的。当然有基础的还是可以选择Java、.NET、Python、nodejs等等，这里就不一一赘述。</p>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h3 id="登录界面"><a href="#登录界面" class="headerlink" title="登录界面"></a>登录界面</h3><p>这是做web系统最基础，也是最常用的功能，先上图</p>
+<p><img src="https://i.imgur.com/8Bb7xPz.jpg" alt=""></p>
+<ol>
+<li>使用了验证码用于防爬虫和恶意登陆，验证码制作方法见这里。</li>
+<li>提供了管理员界面和注册界面的跳转。</li>
+<li>学号和密码使用正则匹配来判定输入正确性（密码为一卡通号）。这里有一个坑，第一次搭项目的时候，正则匹配被放在后端进行，性能优化时选择放入js代码来降低服务器压力。</li>
+<li>跳转逻辑为有分数则跳转到查分界面，没有则进入答题界面。 跳转使用ajax来完成。</li>
+</ol>
+<h3 id="注册界面"><a href="#注册界面" class="headerlink" title="注册界面"></a>注册界面</h3><p><img src="https://i.imgur.com/yoJ1Yrm.jpg" alt=""></p>
+<ol>
+<li>可有可无，避免学校给的信息有缺漏。</li>
+<li>数据库添加（这里尤其防sql注入）操作，不赘述。</li>
+</ol>
+<h3 id="答题界面"><a href="#答题界面" class="headerlink" title="答题界面"></a>答题界面</h3><p>本次项目的重点，也是核心算法体现的位置</p>
+<p><img src="https://i.imgur.com/nqkpCdz.png" alt=""></p>
+<ol>
+<li>显而易见的部分我就不赘述，将前端登录信息传进来后都可以做。</li>
+<li>倒计时效果实现见这里。（关键在于setTimeout函数），时间结束自动交卷。</li>
+<li>限定必须所有题目答案完成才能交卷，从而限制恶意刷卷的可能。</li>
+<li>交卷先写入数据库，后跳转至查分页面。</li>
+</ol>
+<p><strong> 题目获取逻辑（核心）</strong></p>
+<pre><code>* 本次项目最难，也最体现自主思考的就是题目获取算法，主要在于尽可能地降低服务器压力（不考虑负载均衡和分布式等复杂架构）。 *
+* 这里我采用的方法是提前构建题库的方法。在项目部署完成后运行获取题目脚本createQuestionPaper.php，构建500套随机生成的题目放在表中，那么在运行过程中只需要获取题目，不需要使用随机算法来构建题目。从而降低服务器压力。 *
+* 这里还有一个坑就是表中题目储存直接用text格式存放json格式的题干和答案，便于前端获取后进行解析（具体结构在最后的表结构处）。 *
+</code></pre><h3 id="查分界面"><a href="#查分界面" class="headerlink" title="查分界面"></a>查分界面</h3><p><img src="https://i.imgur.com/zIK8ElI.png" alt=""></p>
+<ol>
+<li>限定30秒注销，倒计时同答题界面。</li>
+<li>注销跳转回登录界面</li>
+</ol>
+<h3 id="管理员界面"><a href="#管理员界面" class="headerlink" title="管理员界面"></a>管理员界面</h3><p><img src="https://i.imgur.com/JLDQ78O.jpg" alt=""></p>
+<p><img src="https://i.imgur.com/zahytUC.png" alt=""></p>
+<p><img src="https://i.imgur.com/arhA4J3.png" alt=""></p>
+<ol>
+<li>为每个系的辅导员分配账号，设定为学号前五位+000（如9系为09016000）。</li>
+<li>辅导员界面提供对应系学生全部答题情况并提供下载Excel文件和对学生错误信息的修改界面。Excel文件操作见这里。主要是PHPExcel扩展的使用。</li>
+<li>后台修改就是对数据库信息的修改，不赘述。</li>
+</ol>
+<h1 id="问题和改进意见"><a href="#问题和改进意见" class="headerlink" title="问题和改进意见"></a>问题和改进意见</h1><p>这个项目是当初萌新状态，边学边做的项目，十分初级，有许多可改进和升级的地方，但由于本人后面转到Java和Python上，加上学校坑爹的没有批学分，也就没有进一步优化，只是放到了github上供参考和交流。总结一下几个问题所在：</p>
+<ol>
+<li>最初入坑的时候使用了session和cookie，但是当初根本不理解为什么用，逻辑写的十分混乱，最后一遍干脆直接推倒全部删掉了session和cookie部分，但本身该项目是完全可以用session来完成各页面见信息交互的。</li>
+<li>项目提供了redis缓存技术的代码，但当初配置上出了问题，可能会存在bug。该项目是可以使用redis来存放题库，从而进一步降低服务器压力。</li>
+<li>当时处于边学边做的阶段，没有接触框架。该项目可以使用框架（ThinkPHP、Yii、Laravel）来封装实现（从项目目录来看，本项目可以说很混乱，用函数封装一下会好很多）。</li>
+<li>附sql逻辑：<br><img src="https://i.imgur.com/2KVj1hc.png" alt=""><br><img src="https://i.imgur.com/qqL5WOR.png" alt=""><br><img src="https://i.imgur.com/askrD6Z.png" alt=""><br><img src="https://i.imgur.com/Pj5rMKF.png" alt=""><br><img src="https://i.imgur.com/9aPL9dh.png" alt=""></li>
+</ol>
+<h1 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h1><p>最后对莫少煌同学为该项目提供UI设计的支持表示感谢。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/G4u5zKa.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="项目" scheme="http://yoursite.com/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="PHP," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="冰 天 梦 璇" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="独立开发校史竞赛平台总结">
+<meta property="og:url" content="http://yoursite.com/2017/06/27/校史/index.html">
+<meta property="og:site_name" content="冰 天 梦 璇">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/G4u5zKa.jpg">
+<meta property="og:image" content="https://i.imgur.com/8Bb7xPz.jpg">
+<meta property="og:image" content="https://i.imgur.com/yoJ1Yrm.jpg">
+<meta property="og:image" content="https://i.imgur.com/nqkpCdz.png">
+<meta property="og:image" content="https://i.imgur.com/zIK8ElI.png">
+<meta property="og:image" content="https://i.imgur.com/JLDQ78O.jpg">
+<meta property="og:image" content="https://i.imgur.com/zahytUC.png">
+<meta property="og:image" content="https://i.imgur.com/arhA4J3.png">
+<meta property="og:image" content="https://i.imgur.com/2KVj1hc.png">
+<meta property="og:image" content="https://i.imgur.com/qqL5WOR.png">
+<meta property="og:image" content="https://i.imgur.com/askrD6Z.png">
+<meta property="og:image" content="https://i.imgur.com/Pj5rMKF.png">
+<meta property="og:image" content="https://i.imgur.com/9aPL9dh.png">
+<meta property="og:updated_time" content="2017-09-07T00:32:19.897Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="独立开发校史竞赛平台总结">
+<meta name="twitter:image" content="https://i.imgur.com/G4u5zKa.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/27/校史/"/>
+
+
+
+
+
+  <title>独立开发校史竞赛平台总结 | 冰 天 梦 璇</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">冰 天 梦 璇</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/27/校史/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Iceway">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="冰 天 梦 璇">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">独立开发校史竞赛平台总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-27T10:25:22+08:00">
+                2017-06-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/项目/" itemprop="url" rel="index">
+                    <span itemprop="name">项目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://i.imgur.com/G4u5zKa.jpg" alt=""><br><a id="more"></a></p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>该项目用于2016级东南大学新生校史知识竞赛初赛答题所开发的web平台，具体代码见<a href="https://github.com/IcewayC/PHP_seuhistory" target="_blank" rel="external">这里</a></p>
+<h1 id="具体细节要求"><a href="#具体细节要求" class="headerlink" title="具体细节要求"></a>具体细节要求</h1><ol>
+<li>首先就是坑爹的IE6支持，可能这是最后一次要求对IE6的支持（据说就这一条导致很多大佬放弃了这个项目）。</li>
+<li>要求同一间机房的题目尽量保持不同。</li>
+<li>考虑学校性能（没有变态到要用负载均衡，但以及上万名考生的负载，要尽可能降低服务器压力）。</li>
+</ol>
+<h1 id="项目实现过程"><a href="#项目实现过程" class="headerlink" title="项目实现过程"></a>项目实现过程</h1><h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h2><p>当时处于小白状态，所以选择了对新手较为友好的PHP作为项目后台语言，选择Windows平台作为开发平台，XAMPP来部署PHP开发环境。</p>
+<p>这可以说是对新手最友好的一套方案，零基础也是可以上手的。当然有基础的还是可以选择Java、.NET、Python、nodejs等等，这里就不一一赘述。</p>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h3 id="登录界面"><a href="#登录界面" class="headerlink" title="登录界面"></a>登录界面</h3><p>这是做web系统最基础，也是最常用的功能，先上图</p>
+<p><img src="https://i.imgur.com/8Bb7xPz.jpg" alt=""></p>
+<ol>
+<li>使用了验证码用于防爬虫和恶意登陆，验证码制作方法见这里。</li>
+<li>提供了管理员界面和注册界面的跳转。</li>
+<li>学号和密码使用正则匹配来判定输入正确性（密码为一卡通号）。这里有一个坑，第一次搭项目的时候，正则匹配被放在后端进行，性能优化时选择放入js代码来降低服务器压力。</li>
+<li>跳转逻辑为有分数则跳转到查分界面，没有则进入答题界面。 跳转使用ajax来完成。</li>
+</ol>
+<h3 id="注册界面"><a href="#注册界面" class="headerlink" title="注册界面"></a>注册界面</h3><p><img src="https://i.imgur.com/yoJ1Yrm.jpg" alt=""></p>
+<ol>
+<li>可有可无，避免学校给的信息有缺漏。</li>
+<li>数据库添加（这里尤其防sql注入）操作，不赘述。</li>
+</ol>
+<h3 id="答题界面"><a href="#答题界面" class="headerlink" title="答题界面"></a>答题界面</h3><p>本次项目的重点，也是核心算法体现的位置</p>
+<p><img src="https://i.imgur.com/nqkpCdz.png" alt=""></p>
+<ol>
+<li>显而易见的部分我就不赘述，将前端登录信息传进来后都可以做。</li>
+<li>倒计时效果实现见这里。（关键在于setTimeout函数），时间结束自动交卷。</li>
+<li>限定必须所有题目答案完成才能交卷，从而限制恶意刷卷的可能。</li>
+<li>交卷先写入数据库，后跳转至查分页面。</li>
+</ol>
+<p><strong> 题目获取逻辑（核心）</strong></p>
+<pre><code>* 本次项目最难，也最体现自主思考的就是题目获取算法，主要在于尽可能地降低服务器压力（不考虑负载均衡和分布式等复杂架构）。 *
+* 这里我采用的方法是提前构建题库的方法。在项目部署完成后运行获取题目脚本createQuestionPaper.php，构建500套随机生成的题目放在表中，那么在运行过程中只需要获取题目，不需要使用随机算法来构建题目。从而降低服务器压力。 *
+* 这里还有一个坑就是表中题目储存直接用text格式存放json格式的题干和答案，便于前端获取后进行解析（具体结构在最后的表结构处）。 *
+</code></pre><h3 id="查分界面"><a href="#查分界面" class="headerlink" title="查分界面"></a>查分界面</h3><p><img src="https://i.imgur.com/zIK8ElI.png" alt=""></p>
+<ol>
+<li>限定30秒注销，倒计时同答题界面。</li>
+<li>注销跳转回登录界面</li>
+</ol>
+<h3 id="管理员界面"><a href="#管理员界面" class="headerlink" title="管理员界面"></a>管理员界面</h3><p><img src="https://i.imgur.com/JLDQ78O.jpg" alt=""></p>
+<p><img src="https://i.imgur.com/zahytUC.png" alt=""></p>
+<p><img src="https://i.imgur.com/arhA4J3.png" alt=""></p>
+<ol>
+<li>为每个系的辅导员分配账号，设定为学号前五位+000（如9系为09016000）。</li>
+<li>辅导员界面提供对应系学生全部答题情况并提供下载Excel文件和对学生错误信息的修改界面。Excel文件操作见这里。主要是PHPExcel扩展的使用。</li>
+<li>后台修改就是对数据库信息的修改，不赘述。</li>
+</ol>
+<h1 id="问题和改进意见"><a href="#问题和改进意见" class="headerlink" title="问题和改进意见"></a>问题和改进意见</h1><p>这个项目是当初萌新状态，边学边做的项目，十分初级，有许多可改进和升级的地方，但由于本人后面转到Java和Python上，加上学校坑爹的没有批学分，也就没有进一步优化，只是放到了github上供参考和交流。总结一下几个问题所在：</p>
+<ol>
+<li>最初入坑的时候使用了session和cookie，但是当初根本不理解为什么用，逻辑写的十分混乱，最后一遍干脆直接推倒全部删掉了session和cookie部分，但本身该项目是完全可以用session来完成各页面见信息交互的。</li>
+<li>项目提供了redis缓存技术的代码，但当初配置上出了问题，可能会存在bug。该项目是可以使用redis来存放题库，从而进一步降低服务器压力。</li>
+<li>当时处于边学边做的阶段，没有接触框架。该项目可以使用框架（ThinkPHP、Yii、Laravel）来封装实现（从项目目录来看，本项目可以说很混乱，用函数封装一下会好很多）。</li>
+<li>附sql逻辑：<br><img src="https://i.imgur.com/2KVj1hc.png" alt=""><br><img src="https://i.imgur.com/qqL5WOR.png" alt=""><br><img src="https://i.imgur.com/askrD6Z.png" alt=""><br><img src="https://i.imgur.com/Pj5rMKF.png" alt=""><br><img src="https://i.imgur.com/9aPL9dh.png" alt=""></li>
+</ol>
+<h1 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h1><p>最后对莫少煌同学为该项目提供UI设计的支持表示感谢。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/28/hexo建站/" rel="prev" title="Github.io + hexo建站">
+                Github.io + hexo建站 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="/images/avatar.gif"
+              alt="Iceway" />
+          
+            <p class="site-author-name" itemprop="name">Iceway</p>
+            <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives">
+            
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/IcewayC" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:2322204323@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/iceway-37/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>知乎</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#具体细节要求"><span class="nav-number">2.</span> <span class="nav-text">具体细节要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目实现过程"><span class="nav-number">3.</span> <span class="nav-text">项目实现过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语言"><span class="nav-number">3.1.</span> <span class="nav-text">语言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块"><span class="nav-number">3.2.</span> <span class="nav-text">模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#登录界面"><span class="nav-number">3.2.1.</span> <span class="nav-text">登录界面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注册界面"><span class="nav-number">3.2.2.</span> <span class="nav-text">注册界面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#答题界面"><span class="nav-number">3.2.3.</span> <span class="nav-text">答题界面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查分界面"><span class="nav-number">3.2.4.</span> <span class="nav-text">查分界面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#管理员界面"><span class="nav-number">3.2.5.</span> <span class="nav-text">管理员界面</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题和改进意见"><span class="nav-number">4.</span> <span class="nav-text">问题和改进意见</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#鸣谢"><span class="nav-number">5.</span> <span class="nav-text">鸣谢</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Iceway</span>
+
+  
+</div>
+
+
+ <div>个人专属博客 | Iceway</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
