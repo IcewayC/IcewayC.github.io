@@ -122,7 +122,16 @@
 <meta property="og:image" content="https://i.imgur.com/XczfmOf.png">
 <meta property="og:image" content="https://i.imgur.com/R825Puo.png">
 <meta property="og:image" content="https://i.imgur.com/HBeaPaK.png">
-<meta property="og:updated_time" content="2017-09-11T03:05:10.414Z">
+<meta property="og:image" content="https://i.imgur.com/4sDd1zR.png">
+<meta property="og:image" content="https://i.imgur.com/wqjr4K7.png">
+<meta property="og:image" content="https://i.imgur.com/q6Gst5j.png">
+<meta property="og:image" content="https://i.imgur.com/dmf7tu9.png">
+<meta property="og:image" content="https://i.imgur.com/fV7BLpb.png">
+<meta property="og:image" content="https://i.imgur.com/LSzoNRS.png">
+<meta property="og:image" content="https://i.imgur.com/jYsBHZT.png">
+<meta property="og:image" content="https://i.imgur.com/le43Fcu.png">
+<meta property="og:image" content="https://i.imgur.com/HB70zEy.png">
+<meta property="og:updated_time" content="2017-09-12T08:02:38.316Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络安全实验室题解">
 <meta name="twitter:image" content="https://i.imgur.com/Z9mBN4a.jpg">
@@ -379,7 +388,7 @@
       
         <p><img src="https://i.imgur.com/Z9mBN4a.jpg" alt=""><br><a id="more"></a></p>
 <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>今日入了网安的坑，看了各位大佬的安利，找到网络安全实验室的网站来解题，很多题要看参考才能解得出来，磕磕碰碰几天，把前四关的大部分题解完，积分勉强过了6000。网上的很多总结博客已经过时，这里结合自己的答题过程进行一下总结。</p>
-<h1 id="答题过程"><a href="#答题过程" class="headerlink" title="答题过程"></a>答题过程</h1><h2 id="基础关"><a href="#基础关" class="headerlink" title="基础关"></a>基础关</h2><p>第一题：<br>右击看网页源代码，在注释里。</p>
+<h1 id="答题过程"><a href="#答题过程" class="headerlink" title="答题过程"></a>答题过程</h1><h2 id="基础关"><a href="#基础关" class="headerlink" title="基础关"></a>基础关</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>第一题：<br>右击看网页源代码，在注释里。</p>
 <p>第二题：<br>这段代码是rot-13编码，找一个解密网站或者自己写解密代码即可。<br>这里注意，代码中有数字，博主一开始以为是rot-18编码，答案一直错误，后面忽略数字用rot-13解密才得到正确答案。</p>
 <p>第三题：<br>这里需要Python脚本进行一个循环解密，解到最后得到key，脚本代码如下：<br><img src="https://i.imgur.com/uP444c6.png" alt=""></p>
 <p>第四题：<br>MD5解密即可。</p>
@@ -392,7 +401,7 @@
 <p>第十一题：<br>该题网站出现了Bug，PHP代码暴露，不用做即可找到key。但该题思路就是将Referer地址修改为127.0.0.1即可。</p>
 <p>第十二题：<br>该题涉及robots.txt。将地址后面index.php修改为robots.txt即可打开。<br><img src="https://i.imgur.com/Ul8Gl76.png" alt=""><br>找到Disallow的地址，找下去即可找到key。</p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>总的来说，基础关基本没有涉及真正的攻防，是一些web和HTTP请求的一些基础知识的反映和体现，比较简单。</p>
-<h2 id="脚本关"><a href="#脚本关" class="headerlink" title="脚本关"></a>脚本关</h2><p>第一题：<br>这里使用了js跳转，不要用web的js，用工具发送HTTP请求即可。</p>
+<h2 id="脚本关"><a href="#脚本关" class="headerlink" title="脚本关"></a>脚本关</h2><h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p>第一题：<br>这里使用了js跳转，不要用web的js，用工具发送HTTP请求即可。</p>
 <p>第二题：<br>这是第一个有点费劲的题。思路是自己写脚本，用正则将计算式算出来，Python提供了eval()函数来进行计算，得到结果后发送请求即可，代码如下：<br><img src="https://i.imgur.com/SVxRmLz.png" alt=""><br>坑主要是正则表达式的构造，熟悉的就会比较简单。</p>
 <p>第三题：<br>题意看不懂，直接输null即可。</p>
 <p>第四题：<br><img src="https://i.imgur.com/aw6bDMM.png" alt=""><br>从源代码来看，js将alert、write、prompt全部捕捉了，但本体key藏在前端中，所以可以把源代码复制到一个HTML文件中，将三个捕捉function删掉，就能弹出key了。<br>注意：别傻乎乎地解a…<br>注注意：得到的key要从chars后开始计算14位……（欲哭无泪）</p>
@@ -405,16 +414,28 @@
 showkey();</code></p>
 <p>希望有构造成功的大佬联系我。  </p>
 <h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p>脚本关第八题微笑题博主还没有解出，解出后会更新。<br>脚本关已经用到了编程和一些攻防思路，题目难度提高不少。</p>
-<h2 id="注入关"><a href="#注入关" class="headerlink" title="注入关"></a>注入关</h2><p>第一题：<br>该题就是万能密码的体现：<br><img src="https://i.imgur.com/PB7yvl8.png" alt=""><br>密码随便乱输的。<br>熟悉SQL的同学应该比较理解，简单来说，#表示注释号，注释掉后面的SQL语句，’结束用户名字段，查询语句就变成只根据用户名查询从而通过。</p>
+<h2 id="注入关"><a href="#注入关" class="headerlink" title="注入关"></a>注入关</h2><h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>第一题：<br>该题就是万能密码的体现：<br><img src="https://i.imgur.com/PB7yvl8.png" alt=""><br>密码随便乱输的。<br>熟悉SQL的同学应该比较理解，简单来说，#表示注释号，注释掉后面的SQL语句，’结束用户名字段，查询语句就变成只根据用户名查询从而通过。</p>
 <p>第二题：<br>该题为SQL注入最基础形式：<br><img src="https://i.imgur.com/4ybow9c.png" alt=""><br>报的错表示这里有注入漏洞，注入格式为id=1 or 1=1即可注入成功。</p>
 <p>第三题：<br>构造格式为：id=1%a0%27 or 1=1 limit 2,1%23。<br><img src="https://i.imgur.com/XczfmOf.png" alt=""><br>典型宽字节注入，需要同学了解URL编码和SQL的limit用法。</p>
 <p>第四题：<br>这是博主止步的题，由于这个题根据实验知语句中有order by，无法使用union注入，网上使用了procedure，这里将注入结构给出，procedure博主也不太会，给大家参考，同时希望有大佬给博主解释一波。<br>start=0&amp;num=1  &nbsp;&nbsp;报错注入<br>start=7&amp;num=1 procedure analyse(extractvalue(1,concat(0x3a,database())),1)  &nbsp;&nbsp;爆库<br>start=7&amp;num=1 procedure analyse(extractvalue(1,concat(0x3a,(select table_name from information_schema.tables where table_schema=0x6d79646273 limit 0,1 ))),1)&nbsp;&nbsp;爆表<br>start=7&amp;num=1 procedure analyse(extractvalue(1,concat(0x3a,(select concat(username,0x3a,password) from user limit 2,1 ))),1)&nbsp;&nbsp;爆数据</p>
 <h3 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h3><p>后面的题博主还没有做，但以博主的SQL造诣感觉有点困难，有可能要去拥抱sqlmap了……<br>SQL注入一直是web安全中绕不过的重要部分，原理和基础方法还是希望读者能理解掌握。</p>
-<h2 id="上传关"><a href="#上传关" class="headerlink" title="上传关"></a>上传关</h2><p>第一题：<br>该题图片验证在js部分，但暴露了访问地址。直接输入/upload_file.php就得到了key，get请求获得，上传jpg是post请求，现在我只能做此解释，希望懂得大佬联系我。<br><img src="https://i.imgur.com/R825Puo.png" alt=""></p>
+<h2 id="上传关"><a href="#上传关" class="headerlink" title="上传关"></a>上传关</h2><h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>第一题：<br>该题图片验证在js部分，但暴露了访问地址。直接输入/upload_file.php就得到了key，get请求获得，上传jpg是post请求，现在我只能做此解释，希望懂得大佬联系我。<br><img src="https://i.imgur.com/R825Puo.png" alt=""></p>
 <p>第二题：<br>该题图片验证放到了服务器上，发送请求后抓包，将请求中的.jpg换为.php即可获得key。<br><img src="https://i.imgur.com/HBeaPaK.png" alt=""></p>
 <p>第三题：<br>该题是通过切割来验证jpg文件，所以文件名构造成XXX.jpg.php即可。</p>
 <h3 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h3><p>上传绕过是博主从未接触过的部分，原理没弄太懂，大概就是文件绕过（话说注入第五关好像还用到了静态图片文件注入……），后面会做深入了解。</p>
-<h2 id="后言"><a href="#后言" class="headerlink" title="后言"></a>后言</h2><p>解密关和综合关博主还没有做，后面会后续更新。<br>网络空间实验室的题可以说是新手小白入门CTF和网络安全比较好的选择，只不过多年没有更新题库，教程区也404了。类似的网站还有很多，希望各位大佬进行技术交流。</p>
+<h2 id="解密关"><a href="#解密关" class="headerlink" title="解密关"></a>解密关</h2><h3 id="题目-4"><a href="#题目-4" class="headerlink" title="题目"></a>题目</h3><p>第一题：<br>这道题让我想到了脚本关手机号的一题，但是这里不能直接代替输入了。<br>用admin1代替重置，然后解md5发现，本题重置密码生成的密码为时间戳的md5加密，所以写Python脚本进行碰撞即可。<br><img src="https://i.imgur.com/4sDd1zR.png" alt=""><br>时间会很久……</p>
+<p>第二题：<br>这道题需要用到EWSA工具来做穷举。2014年上大三（博主做的时候刚好大三，20岁），所以我锁定时间为1994，需要破解出月份和日期。用Python脚本生成字典：<br><img src="https://i.imgur.com/wqjr4K7.png" alt=""><br>然后用EWSA破解即可（博主的EWSA一跑就停止工作，不用显卡驱动也这样，心疼……）。</p>
+<p>第三题：<br>这道题是一个Cisco库破解，用python的Cisco库写脚本即可。<br><img src="https://i.imgur.com/q6Gst5j.png" alt=""><br>或者选择在线破解看<a href="http://www.ifm.net.nz/cookbooks/passwordcracker.html" target="_blank" rel="external">这里</a>。</p>
+<p>第四题：<br>博主对这个题表示无语……<br><img src="https://i.imgur.com/dmf7tu9.png" alt=""><br>大致思路就是某种算法然后解密，具体原理一脸懵逼，而且丝毫没有兴趣去搞……</p>
+<p>第五题：<br>这个题是一个十六进制解密题。<br><img src="https://i.imgur.com/fV7BLpb.png" alt=""><br>后面是重复无用的代码，重点在第一行和第六行。<br>第一行为这张卡uid的位置，也是出错代码的位置，第一行全部改0后输出金额为100。<br>第六行2710的十进制为10000，说明这个题的金额表示为100.00。<br>efd8代表取反，37代表两字节之和校验，即两个位置数字都得是1027或其他。<br>这里要修改为200，200的十六进制为4e20，所以讲两个1027改为204e即可。</p>
+<p>第六题：<br>该题是base64破解题，当然没有那么简单。密文全部为大写字母，所以要将所有情况进行穷举破解。<br><img src="https://i.imgur.com/LSzoNRS.png" alt=""><br>这里使用了递归算法，将结果罗列，挨个试验即可（其实挺明显的……）。</p>
+<p>第七题：<br>这个题用到了PHP代码的‘==’特性，在PHP中如果两个变量的md5密文是0e[0-9].*格式，无论原变量值是否相同，PHP认为其相等。<br><img src="https://i.imgur.com/jYsBHZT.png" alt=""><br>这里代码的意思就是：  </p>
+<ol>
+<li>password不能与rootadmin相等。  </li>
+<li>md5(password)与md5(rootadmin)相等。<br>而rootadmin加密的MD5码为0e332932043729729062996282883873，符合结构，所以只要发送post请求，参数password的MD5为上述结构即可。常见的为s878926199a、240610708、QNKCDZO等。<br>注意：这里发送post需要在请求头上加上Content-Type:application/x-www-form-urlencoded。</li>
+</ol>
+<p>第八题：<br>令人啼笑皆非的一道题。<br>拿到文件后用txt打开，会发现软件名称。<br><img src="https://i.imgur.com/le43Fcu.png" alt=""><br>然后把软件下载下来（70多个M）安装完成后，导入文件即可看到key。<br><img src="https://i.imgur.com/HB70zEy.png" alt=""></p>
+<h2 id="后言"><a href="#后言" class="headerlink" title="后言"></a>后言</h2><p>综合关博主还没有做，后面会后续更新。<br>网络空间实验室的题可以说是新手小白入门CTF和网络安全比较好的选择，只不过多年没有更新题库，教程区也404了。类似的网站还有很多，希望各位大佬进行技术交流。</p>
 
       
     </div>
@@ -617,7 +638,7 @@ showkey();</code></p>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#答题过程"><span class="nav-number">2.</span> <span class="nav-text">答题过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础关"><span class="nav-number">2.1.</span> <span class="nav-text">基础关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">2.1.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脚本关"><span class="nav-number">2.2.</span> <span class="nav-text">脚本关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#总结-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注入关"><span class="nav-number">2.3.</span> <span class="nav-text">注入关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#总结-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上传关"><span class="nav-number">2.4.</span> <span class="nav-text">上传关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#总结-3"><span class="nav-number">2.4.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后言"><span class="nav-number">2.5.</span> <span class="nav-text">后言</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#答题过程"><span class="nav-number">2.</span> <span class="nav-text">答题过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础关"><span class="nav-number">2.1.</span> <span class="nav-text">基础关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目"><span class="nav-number">2.1.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">2.1.2.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脚本关"><span class="nav-number">2.2.</span> <span class="nav-text">脚本关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注入关"><span class="nav-number">2.3.</span> <span class="nav-text">注入关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上传关"><span class="nav-number">2.4.</span> <span class="nav-text">上传关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-3"><span class="nav-number">2.4.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结-3"><span class="nav-number">2.4.2.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解密关"><span class="nav-number">2.5.</span> <span class="nav-text">解密关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-4"><span class="nav-number">2.5.1.</span> <span class="nav-text">题目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后言"><span class="nav-number">2.6.</span> <span class="nav-text">后言</span></a></li></ol></li></ol></div>
             
 
           </div>
