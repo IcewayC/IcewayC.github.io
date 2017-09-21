@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-13T02:39:21.294Z</updated>
+  <updated>2017-09-21T00:34:05.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>网络安全实验室题解</title>
+    <title>网络安全实验室WriteUp</title>
     <link href="http://yoursite.com/2017/09/11/CTF%E5%9F%BA%E7%A1%80/"/>
     <id>http://yoursite.com/2017/09/11/CTF基础/</id>
     <published>2017-09-11T00:50:18.000Z</published>
-    <updated>2017-09-13T02:39:21.294Z</updated>
+    <updated>2017-09-21T00:34:05.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://i.imgur.com/Z9mBN4a.jpg" alt=""><br><a id="more"></a></p>
 <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>今日入了网安的坑，看了各位大佬的安利，找到网络安全实验室的网站来解题，很多题要看参考才能解得出来，磕磕碰碰几天，把前四关的大部分题解完，积分勉强过了6000。网上的很多总结博客已经过时，这里结合自己的答题过程进行一下总结。</p>
